@@ -1,5 +1,4 @@
-
-
+# /source/movie.py
 from typing import Iterator, Literal, TypeAlias
 
 MovieData: TypeAlias = str | list[str]
@@ -10,13 +9,13 @@ db: DB = {
     "Kung Fu Panda": {
         "title": "Kung Fu Panda",
         "genre": "???",
-        "showtime": ["1:00 PM", "5:00 PM"]
+        "showtime": ["1:00 PM", "5:00 PM"],
     },
     "Kung Fu Panda 2": {
         "title": "Kung Fu Panda",
         "genre": "???",
-        "showtime": ["2:00 PM", "6:00 PM"]
-    }
+        "showtime": ["2:00 PM", "6:00 PM"],
+    },
 }
 
 
@@ -33,11 +32,3 @@ def find_earliest_and_latest_showtime(title: str) -> tuple[str, str]:
         raise KeyError
 
     return (movie["showtime"][0], movie["showtime"][-1])
-
-
-def main() -> None:
-    ...
-
-
-if __name__ == "__main__":
-    main()
